@@ -7,7 +7,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
-  <body id="bgclr">
+  <body class="login-page">
     <div id="lgn">
         <h1 class="emr">Electricity Meter Reader</h1><br>
         <form action="home.php">

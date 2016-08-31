@@ -1,8 +1,9 @@
-#bgclr{
-	background-color: #16365c;
-}
+@import url('../fonts/stylesheet.css');
 
-@import url(../fonts/stylesheet.css);
+
+.login-page{
+	background-color: #330055;
+}
 
 .emr{
 	color: white;
@@ -44,13 +45,17 @@
 }
 
 .menu{
-	width: 80%;
-	margin: 0 auto;
-	margin-top: 5em !important;
-
+	width: 100%;
+	/*margin-top: 5em !important;*/
+	background-color: #330055;
 }
 
-li {
+.mlist{
+	width: 80%;
+	margin: auto;
+}
+
+.menu li {
     float: left;
     list-style: none;
     padding-left: 0.5em;
@@ -58,23 +63,22 @@ li {
     border-bottom: 2px solid black;
 }
 
-li a {
+.menu li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 16px;
+    padding: 30px 16px;
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
-
 }
 
-li a:hover{
+.menu li a:hover{
 	color: #507aac;
 	text-decoration: none;
 }
 
-#active{
+.menu #active{
 	color: #548cd4 !important;
 }
 
@@ -109,7 +113,7 @@ li a:hover{
 }
 
 .theader{
-	background-color: #507aac;
+	background-color: #330055;
 	color: white;
 	text-align: center;
 	font-size: 15px;
@@ -118,7 +122,7 @@ li a:hover{
 }
 
 .theader2{
-	background-color: #507aac;
+	background-color: #330055;
 	color: white;
 	text-align: center;
 	font-size: 15px;
@@ -128,7 +132,7 @@ li a:hover{
 }
 
 .collabels3{
-	background-color: #507aac;
+	background-color: #330055;
 	color: white;
 	text-align: center;
 	font-size: 13px;
@@ -147,23 +151,21 @@ li a:hover{
 
 
 .custinfo{
-	background-color: #507aac;
+	background-color: #330055;
 	padding-left: 1em;
 	padding-top: 0.4em;
 	padding-bottom: 0.4em;
 	margin-right:2em;
+	color: #fff;
 }
 input{
-	background-color: #507aac;
+	background-color: #330055;
 	padding-left: 1em;
 	padding-top: 0.4em;
 	padding-bottom: 0.4em;
 	margin-right:2em;
 }
 
-td{
-	color:white;
-}
 
 .collabels{
 	padding-left: 20px;
@@ -185,7 +187,7 @@ td{
 }
 
 .tble3{
-	background-color: #507aac;
+	background-color: #330055;
 	width: 90%;
 	margin: 0 auto;
 	text-align: center;
