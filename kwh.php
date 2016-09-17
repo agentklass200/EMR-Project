@@ -9,7 +9,7 @@
   </head>
   <body id="bgclr">
   <div class="menu">
-    <ul class="mlist clearfix">
+    <ul class="mlist">
       <li><a id="emrlst" href="#">Electricity Meter Reader</a></li>
       <li><a href="home.php">HOME</a></li>
       <li><a href="realtime.php">REAL TIME</a></li>
@@ -20,18 +20,19 @@
     </ul>
   </div>
 
+  <br><br>
+
   <div class="tablediv">
-  <br><br><br>
   <table class="tble2">
 
           <tr>
-            <td class="collabels">START</td><td><input class="custinfo" placeholder = "YYYY-MM-DD"></td></input><br>
-            <td class="collabels">END</td><td><input class="custinfo" placeholder = "YYYY-MM-DD"></td></input><br>
+            <td class="collabels">START</td><td><input class="custinfo2" placeholder = "YYYY-MM-DD"></td></input><br>
+            <td class="collabels">END</td><td><input class="custinfo2" placeholder = "YYYY-MM-DD"></td></input><br>
           </tr>
 
           <tr><td><br><br></td></tr>
           <tr>
-            <td></td><td></td><td class="collabels">TOTAL KWH</td><td><input class="custinfo" placeholder = "N/A"></td></input>
+            <td></td><td></td><td class="collabels">TOTAL KWH</td><td><input class="custinfo2" placeholder = "N/A"></td></input>
           <tr>
           
 

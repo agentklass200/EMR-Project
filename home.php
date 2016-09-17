@@ -8,22 +8,22 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body id="bgclr">
-  <div class="menu">
-    <ul class="mlist clearfix">
-      <li><a id="emrlst" href="#">Electricity Meter Reader</a></li>
-      <li><a href="home.php" id="active">HOME</a></li>
-      <li><a href="realtime.php">REAL TIME</a></li>
-      <li><a href="daily.php">DAILY</a></li>
+   <div class="menu">
+    <ul class="mlist">
+       <li><a id="emrlst" href="#">Electricity Meter Reader</a></li>
+       <li><a href="home.php" id="active">HOME</a></li>
+       <li><a href="realtime.php">REAL TIME</a></li>
+       <li><a href="daily.php">DAILY</a></li>
       <li><a href="monthly.php">MONTHLY</a></li>
       <li><a href="kwh.php">KWH CALCULATOR</a></li>
       <li><a href="estimation.php">ESTIMATION</a></li>
     </ul>
   </div>
+  
+  <br><br>
 
   <div class="tablediv">
-  <br><br><br><br>
   <table class="tble">
-
     <tr>
       <th class="theader" colspan="3">Customer Information</th>
     </tr>
@@ -34,7 +34,7 @@
         <img src="img/user.png" alt="" style="width:150px;height:150px;">
       </td>
       <td>
-        <table style="width: 100%;">
+        <table style="width: 100%">
           <tr>
             <td class="collabels">Meter Number</td><td class="custinfo">Customer Info</td>
           </tr>
@@ -57,9 +57,9 @@
  
   </div>
 
+  <br><br>
 
-
-  <div class="tablediv">
+  <div class="tablediv3">
   <table style="width: 90%; margin: 0 auto;">
 
     <tr>

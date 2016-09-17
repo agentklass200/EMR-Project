@@ -9,7 +9,7 @@
   </head>
   <body id="bgclr">
   <div class="menu">
-    <ul class="mlist clearfix">
+    <ul class="mlist">
       <li><a id="emrlst" href="#">Electricity Meter Reader</a></li>
       <li><a href="home.php">HOME</a></li>
       <li><a href="realtime.php">REAL TIME</a></li>

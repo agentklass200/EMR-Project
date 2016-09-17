@@ -9,7 +9,7 @@
   </head>
   <body id="bgclr">
   <div class="menu">
-    <ul class="mlist clearfix">
+    <ul class="mlist">
       <li><a id="emrlst" href="#">Electricity Meter Reader</a></li>
       <li><a href="home.php">HOME</a></li>
       <li><a href="realtime.php" id="active">REAL TIME</a></li>
@@ -20,8 +20,9 @@
     </ul>
   </div>
 
+  <br><br>
+
   <div class="tablediv">
-  <br><br><br>
   <table style="width: 20%; margin-left:10%;">
 
           <tr>

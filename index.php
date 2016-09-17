@@ -7,8 +7,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
-  <body class="login-page">
     <div id="lgn">
+      <table style="width: 90%; margin: 0 auto;">
         <h1 class="emr">Electricity Meter Reader</h1><br>
         <form action="home.php">
            
@@ -22,11 +22,10 @@
               <a href="#" id="fp">Forgot Password?</a>
             <br><br>  
             <button type="submit" id="lgnbtn">
-              LOGIN
+              <b>LOGIN</b>
             </button>
           </form>
     </div>
-
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
