@@ -6,6 +6,22 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="./chartist/chartist.min.css">
+
+    <style>
+      .ct-series-a .ct-line {
+        /* Set the colour of this series line */
+        stroke: white;
+      }
+
+      .ct-series-a .ct-point {
+        /* Set the colour of this series line */
+        stroke: white;
+      }
+    </style>
+
+
   </head>
   <body id="bgclr">
   <div class="menu">
@@ -39,11 +55,16 @@
 
 
   </table>
+
   </div>
-  <div style="width: 90%; margin: 0 auto;">
+  <div style="width: 90%; margin: 50px auto;">
   <table style="width: 80%; margin-left:10%;">
           <tr>
-            <td class="collabels">Insert Graph There >>></td><td class="custinfo" style="text-align: center;">HERE!</td><br>
+            <td class="custinfo graph-container" style="text-align: center;">
+                <div class="ct-chart ct-major-tenth">
+                
+                </div>
+            </td>
           </tr>
   </table>
  
@@ -54,5 +75,16 @@
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="./chartist/chartist.min.js"></script>
+    <script>
+        var data = {
+          labels: ['a', 'b', 'c', 'd'],
+          series: [
+            [1 , 2 , 3 , 1.5]
+          ]
+        }
+
+        var chart = Chartist.Line('.ct-chart', data);
+    </script>
   </body>
 </html>
