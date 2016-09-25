@@ -1,233 +1,232 @@
-
-
 @import url(../fonts/stylesheet.css);
 
+:root {
+	--primary-color: #DD137B;
+	--secondary-color: #FFA3B8;
+	--main-font: Montserrat, sans-serif;
+}
 
 body {
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	background-color: #EEE !important;
+	font-family: var(--main-font);
+	/*background-image: url(../img/bg.jpg);*/
+	/*background-size: cover;*/
+	/*background-attachment: fixed;*/
+	/*background-repeat: no-repeat;*/
 }
 
-.emr{
-	color: white;
-	font-family: 'Beyond The Mountains';
-	background-color:rgb(189,130,186);
-}
-
-#lgn{
-	margin: 12% auto;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-    background-color:rgb(189,130,186);
-    border-radius: 5%;
-}
-
-#lgnbtn{
-	background-color:rgb(83,6,118);
-	border: none;
-	color: white;
-	padding:0.5em;
-	letter-spacing: 0.05em;
-	border-radius: 7%;
-}
-
-#fp{
-	color: rgb(141,184,254);
-}
-
-.lgnlbls{
-	color: white;
-	margin: 1em;
-	letter-spacing: 0.05em;
-
-}
-
-
-.lgnlbls:hover{
-	text-decoration: none;
-	cursor: default;
-	color: white;
-}
-
-.menu{
-	width: 100%;
-	height: 40px;
-	top: 0px;
-	margin: 0 auto;
-	margin-top: -10px;
-	float: center;
-	float: bottom;
+img.bg-lightning {
 	position: fixed;
-	background-color:rgb(83,6,118);
-}
-
-li {
-    float: left;
-    float: bottom;
-    list-style: none;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
-
-}
-
-li a:hover{
-	color: #507aac;
-	text-decoration: none;
-}
-
-#active{
-	color: #548cd4 !important;
-}
-
-#emrlst{
-	margin-right: 50px;
-	text-decoration: none;
-	cursor: default;
-}
-
-#emrlst:hover{
-	text-decoration: none;
-	cursor: default;
-	color: white;
-}
-
-#emrlst:visited{
-	text-decoration: none;
-	cursor: default;
-	color: white;
-}
-
-.tablediv{
 	width: 50%;
-	margin: 0 auto;
-	padding-bottom: 2em;
-	background-color:rgb(189,130,186);
-	border-radius: 5%;
-
+	top: 50px;
+	left: calc(100% - 90%);
+	z-index: -1;
 }
 
-.tablediv3{
-	width: 50%;
-	margin: 0 auto;
-	padding-bottom: 2em;
-	background-color:rgb(189,130,186);
-	border-radius: 5%;
+div.login-panel {
+	background-color: var(--primary-color);
+	margin: 200px auto;
+	width: 480px;
+	padding: 70px 40px;
+	border-radius: 4px;
 }
 
-.tablediv2{
-	width: 75%;
-	margin: 0 auto;
-	padding-bottom: 5em;
-}
-
-.theader{
-	background-color:rgb(189,130,186);
-	color: black;
+div.login-panel h1 {
+	color: #FFF;
+	margin: 0 0 60px;
+	font-family: 'Beyond The Mountains';
 	text-align: center;
-	font-size: 15px;
-	letter-spacing: 0.1em;
-	padding: 5px;
+	font-size: 42px;
 }
 
-.theader2{
-	background-color:rgb(189,130,186);
-	color: black;
+div.login-panel form {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+div.login-panel input {
+	width: 100%;
+	margin: 0;
+	border-radius: 2px;
+	padding: 10px;
+	border: 1px solid #444;
+	background-color: #FFF;
+}
+
+div.login-panel label {
+	color: #FFF;
+	font: normal 15px var(--main-font);
+	margin: 10px 0;
+}
+
+div.login-panel button {
+	font: normal 15px var(--main-font);
+	width: 100%;
+	margin: 20px 0 0;
+	padding: 10px 0;
+	background-color: #FFF;
+	color: var(--primary-color);
+	border: 1px solid #444;
+}
+
+div.login-panel a.footnote {
+	display: block;
 	text-align: center;
-	font-size: 15px;
-	letter-spacing: 0.1em;
-	padding: 5px;
-	width: 33%;
+	margin: 10px 0 0;
+	color: #FFF;
 }
 
-.collabels3{
-	background-color:rgb(189,130,186);
-	color: black;
-	text-align: center;
-	font-size: 13px;
-	letter-spacing: 0.1em;
-	padding: 5px;
-	width: 33%;
-
+div.login-panel span.error {
+	background-color: #EEE;
+	width: 100%;
+	display: block;
+	padding: 15px;
+	border-radius: 2px;
+	border: 1px solid #444;
+	color: #C6162D;
+	font: normal 15px var(--main-font);
+	margin: 0 0 20px;
 }
 
-.tble{
-	margin-top: 2em !important;
-	width: 90%;
-	margin: 0 auto;
-	background-color:rgb(189,130,186);
-	border-radius: 5%;
+nav.menu{
+	width: 100%;
+	top: 0;
+	height: 60px;
+	background-color: var(--primary-color);
 }
 
-
-
-.custinfo{
-	background-color:rgb(189,130,186);
-	padding-left: 1em;
-	padding-top: 0.4em;
-	padding-bottom: 0.4em;
-	margin-right:2em;
-	color:black;
+ul.nav-links {
+	margin: 0;
+	padding: 0;
 }
 
-.custinfo2{
-	background-color:white;
-	padding-left: 1em;
-	padding-top: 0.4em;
-	padding-bottom: 0.4em;
-	margin-right:2em;
-	color:black;
+ul.nav-links li {
+	font: normal 15px var(--main-font);
+	margin: 0;
+	display: inline-block;
+	list-style: none;
 }
 
-input{
-	background-color:rgb(189,130,186);
-	padding-left: 1em;
-	padding-top: 0.4em;
-	padding-bottom: 0.4em;
-	margin-right:2em;
+ul.nav-links a {
+	display: block;
+	padding: 0 15px;
+	color: #FFF;
+	font: bold 15px var(--main-font);
+	line-height: 60px;
 }
 
-td{
-	color:white;
+ul.nav-links li:first-child a{
+	font: normal 25px 'Beyond the Mountains';
 }
 
-.collabels{
-	padding-left: 20px;
-	width: 20%;
+/* CONTAINERS */
+div.my-container {
+	background-color: var(--secondary-color);
+	width: 95%;
+	padding: 40px;
+	margin: 20px auto 0;
+	display: block;
+	border-radius: 5px;
+	overflow: auto;
+	color: #222;
+}
+
+div.my-container h1 {
+	margin: 0 0 30px;
+	padding: 0;
+	font: bold 30px var(--main-font);
+}
+
+div.cust-img {
+	padding: 0;
+}
+
+div.cust-img img{
+	width: 100%;
+}
+
+div.cust-info {
+	padding: 10px 0 0 40px;
+}
+
+table.my-table{
+	width: 100%;
+}
+
+table.my-table tr td{
+	padding: 8px 0;
+	color: #333;
+	text-align: left;
+}
+
+table.my-table tr td:first-child {
+	width: 70%;
+}
+
+table.no-border tr td,
+table.no-border tr th{
+	border: none;
+	color: #333;
+}
+
+table.no-border tr th {
+	border-bottom: 1px solid #333;
+}
+
+p.realtime-text {
 	text-align: right;
-	padding-right: 20px;
-	color:black;
+	letter-spacing: 1px;
+	margin: 5px 0;
 }
 
-.tble2{3
-	margin-top: 2em !important;
-	width: 80%;
-	margin: 0 auto;
-}
-.collabels2{
-	padding-left: 20px;
-	width: 40%;
-	text-align: right;
-	padding-right: 20px;
-	color:black;
+select.kwh-select {
+	width: 100%;
+	padding: 5px;
 }
 
-.tble3{
-	background-color:rgb(189,130,186);
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-	color: white;
+form.kwh-form input{
+	width: 100%;
+	border: 1px solid #333;
+	padding: 5px;
+}
+
+form.kwh-form input[type='button']{
+	margin: 10px 0;
+}
+
+div.my-container h2{
+	margin: 0 0 10px;
+}
+
+div.total-kwh {
+	background-color: #EEE;
+	width: 100%;
+	padding: 50px 30px;
+	font: bold 45px var(--main-font);
+	border: 1px solid #333;
+}
+
+form.estimate-form {
+	border-right: 1px solid #333;
+	padding-right: 20px;
+}
+
+form.estimate-form input{
+	width: 100%;
+	border: 1px solid #333;
+	padding: 5px;
+}
+
+form.estimate-form input[type='button'] {
+	margin: 10px 0;
+}
+
+div.large-text {
+	background-color: #EEE;
+	padding: 20px;
+	font: bold 30px var(--main-font);
+	margin: 0 0 5px;
 }

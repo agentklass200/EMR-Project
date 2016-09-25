@@ -1,0 +1,20 @@
+{
+    "appliances": {
+        "aircon": [
+            "Are you using an Air Conditioning Unit? If yes, try to use a fan instead or you will reach your set kWh limit before the day is over.",
+            "If you're using an aircon in your sleep, try to change its timer atleast 1 to 2 hours before you wake up because body heat loss is maximal.",
+            "Are you using an Air Conditioning Unit? If yes, try closing all the vents in the area to conserve energy",
+            "Are you using an Air Conditioning Unit? If yes, try turning the lights off. Turning lights off can help reduce your heat, but paying attention to how much light you let in from open windows can also play a significant role.",
+            "Are you using two or more Air Conditioning Unit? If yes, try to keep the curtains closed Natural light can help reduce your lighting costs, however when no one is in a room it is best to keep the curtains closed during the day. Keeping the sun's direct rays from entering the house helps reduce the amount of effort your air conditioner puts forth to keep the house cool."
+        ],
+        "aircon-2": [
+            "Are you using numerous air conditioning unit? If yes, try to lessen the engaged ACU or you will reach your set kWh limit before the day is over.",
+            "Are you using numerous Air Conditioning Unit? If yes, the Air Conditioning Units are consuming too much power try to lessen the engaged ACUs",
+            "Are you using an Air Conditioning Unit? If yes, try to use a fan instead or you will reach your set kWh limit before the day is over",
+            "If you're using an aircon in your sleep, try to change its timer atleast 1 to 2 hours before you wake up because body heat loss is maximal.",
+            "Are you using an Air Conditioning Unit? If yes, try closing all the vents in the area to conserve energy",
+            "Are you using an Air Conditioning Unit? If yes, try turning the lights off. Turning lights off can help reduce your heat, but paying attention to how much light you let in from open windows can also play a significant role.",
+            "Are you using to or more Air Conditioning Unit? If yes, try to keep the curtains closed Natural light can help reduce your lighting costs, however when no one is in a room it is best to keep the curtains closed during the day. Keeping the sun's direct rays from entering the house helps reduce the amount of effort your air conditioner puts forth to keep the house cool."
+        ]   
+    }
+}

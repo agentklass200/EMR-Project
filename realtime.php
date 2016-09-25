@@ -84,7 +84,30 @@
           ]
         }
 
-        var chart = Chartist.Line('.ct-chart', data);
+        var chart = new Chartist.Line('.ct-chart', data);
+        var newLabels = ['e','f','g','h','i','j'];
+        var i = 0;
+
+        $(".graph-container").click(function(){
+          timeout(function(){
+              data.labels.push(newLabels[i++]);
+              data.series[0].push( Math.floor((Math.random()* 3) + 1));
+              chart.update();
+          }, 20) 
+        });
+
+        function timeout(funct, x){
+            setTimeout(function(){
+                funct();
+                if(x <= 0){
+                  return
+                }
+                else{
+                  timeout(funct, x - 1);
+                }
+            }, 1000);
+        }
+        
     </script>
   </body>
 </html>
