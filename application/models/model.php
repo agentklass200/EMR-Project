@@ -39,6 +39,14 @@ class Model extends CI_Model {
         return $query->result_array()[0]['meter'];
     }
 
+    public function get_price($id){
+        $query = $this->db->select('limit')
+            ->from("users")
+            ->where("id", $id)
+            ->get();
+        return $query->result_array()[0]['limit'];
+    }
+
     public function update_price($id, $price) {
         $data["limit"] = $price;
         $this->db->where("id", $id)
@@ -117,6 +125,16 @@ class Model extends CI_Model {
 
     public function insert_reading($data){
         $this->db->insert('readings', $data);
+    }
+
+    public function get_latest_reading($id, $limit = 1) {
+        $query = $this->db->select('date, kwh')
+                          ->from("readings")
+                          ->where("user_id", $id)
+                          ->order_by("date", "desc")
+                          ->limit($limit)
+                          ->get();
+        return $query->result_array();
     }
 
     public function get_reading_meter($meter) {
