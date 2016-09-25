@@ -112,7 +112,7 @@ class Controller extends CI_Controller {
 		$data["price"] = $this->model->get_price($id);
 		$data["rate"] = $this->model->get_total_charge()[0]["total"];
 		$data["percent"] = (($data["consumption"] * $data["rate"]) / $data["price"]) * 100;
-		print_r($data);
+		return json_encode($data);
 	}
 
 
