@@ -99,8 +99,9 @@ class Controller extends CI_Controller {
 
 	public function get_latest_reading(){
 		$id = $this->session->userdata["user_id"];
-		$reading = $this->model->get_latest_reading($id);
-		print_r($reading);
+		$data["readings"] = $this->model->get_latest_reading($id);
+		header('Content-Type: application/json');
+		echo json_encode($data);
 	}
 
 	public function get_percent() {
@@ -191,7 +192,8 @@ class Controller extends CI_Controller {
 	public function get_checked() {
 		$id = $this->session->userdata["user_id"];
 		$list = $this->model->get_user_appliances($id);
-		print_r($list);
+		header('Content-Type: application/json');
+		echo json_encode($list);
 	}
 
 }
