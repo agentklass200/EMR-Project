@@ -7,7 +7,11 @@
         <link href="<?php echo base_url();?>css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url();?>chartist/chartist.min.css">
         <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="<?php echo base_url();?>/js/script.js"></script>
+        <script>
+            $base_url = "<?php echo base_url() ?>";
+        </script>
+        <script src="<?php echo base_url();?>js/script.js"></script>
+        
     </head>
     <body id="bgclr">
         <img src="<?php echo base_url();?>img/icon.svg" class="bg-lightning"/>
@@ -22,5 +26,7 @@
                 <li><a href="<?php echo base_url();?>controller/load_estimation">ESTIMATION</a></li>
             </ul>
         </nav>
+
+        
         
         <div class="col-sm-3"></div>

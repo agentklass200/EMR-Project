@@ -1,4 +1,5 @@
 <div class="col-sm-6">
+  <div class="r"></div>
   <div class="my-container">
     <h1>Customer Information</h1>
     <div class="col-sm-3 cust-img">

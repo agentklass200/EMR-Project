@@ -1,7 +1,5 @@
 <div class="col-sm-6">
-    <div class="recommendation">
     
-    </div>
     <div class="my-container">
         <h1>Realtime KW Consumption</h1>
         <div class="ct-chart ct-major-tenth">
