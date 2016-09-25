@@ -113,6 +113,10 @@ class Controller extends CI_Controller {
 		$this->model->insert_reading($data);
 	}
 
+	public function get_reading_latest(){
+		
+	}
+
 	public function post_reading(){
 		$meter = $_POST['meter'];
 		$kwh = $_POST['kwh'];
