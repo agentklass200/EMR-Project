@@ -58,10 +58,11 @@ class Controller extends CI_Controller {
 		$this->base_template('home', $data);
 	}
 
-	public function load_realtime() {
+	public function load_realtime($limit) {
 		$this->check_logged_id();
-		$this->check_logged_id();
-		$this->base_template('realtime', '');
+		$id = $this->session->userdata["user_id"];
+		$data["readings"] = $this->model->get_latest_reading($id, $limit);
+		$this->base_template('realtime', $data);
 	}
 
 	public function load_daily() {
@@ -96,6 +97,23 @@ class Controller extends CI_Controller {
 		echo $this->model->get_meter($id);
 	}
 
+	public function get_latest_reading(){
+		$id = $this->session->userdata["user_id"];
+		$reading = $this->model->get_latest_reading($id);
+		print_r($reading);
+	}
+
+	public function get_percent() {
+		$id = $this->session->userdata["user_id"];
+		$meter = $this->model->get_meter($id);
+		$from = date('Y-m-01');
+		$to  = date('Y-m-d');
+		$data["consumption"] = $this->model->get_reading_date($from, $to, $meter)[0]["kwh"];
+		$data["price"] = $this->model->get_price($id);
+		$data["rate"] = $this->model->get_total_charge()[0]["total"];
+		$data["percent"] = (($data["consumption"] * $data["rate"]) / $data["price"]) * 100;
+		print_r($data);
+	}
 
 
 //	READINGS
@@ -111,10 +129,6 @@ class Controller extends CI_Controller {
 		);
 
 		$this->model->insert_reading($data);
-	}
-
-	public function get_reading_latest(){
-		
 	}
 
 	public function post_reading(){
@@ -171,6 +185,12 @@ class Controller extends CI_Controller {
 		$checked = array_keys($_POST);
 		$this->model->update_appliance($this->session->userdata["user_id"], $checked);
 		redirect('/controller/load_home', 'refresh');
+	}
+
+	public function get_checked() {
+		$id = $this->session->userdata["user_id"];
+		$list = $this->model->get_user_appliances($id);
+		print_r($list);
 	}
 
 }
