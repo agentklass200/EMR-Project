@@ -1,4 +1,5 @@
 <div class="col-sm-6">
+  <div class="r"></div>
   <div class="my-container">
       <h1>Monthly KW/H</h1>
       <table class="table table-condensed no-border">

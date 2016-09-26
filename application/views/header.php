@@ -6,6 +6,7 @@
         <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="<?php echo base_url();?>css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url();?>chartist/chartist.min.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>chartist/chartist-plugin-tooltip.css">
         <script src="http://code.jquery.com/jquery.js"></script>
         <script>
             $base_url = "<?php echo base_url() ?>";

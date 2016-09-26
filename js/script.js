@@ -2,23 +2,46 @@
 
 $(document).ready(function(){
 
-    $.ajax({
+    var status, currentStatus = 0;
+
+    setInterval(function(){
+        $.ajax({
             url: "get_percent",
             success: function(data){
                 var percent = data.percent;
                 if(percent >= 70 && percent < 100){
-                    $(".r").empty();
-                    checkAlert(data);
+                    if (percent >= 70 && percent < 80){
+                        status = 1;
+                    }
+                    else if(percent >= 80 && percent < 90){
+                        status = 2;
+                    }
+                    else if(percent >= 90 && percent < 100){
+                        status = 3;
+                    }
+
+                    if(currentStatus != status){
+                        currentStatus = status;
+                        $(".r").empty();
+                        checkAlert(data);
+                    }   
                 }
                 else if(percent >= 100){
-                    $(".r").empty();
-                    danger();
+                    status = 4;
+                    if(currentStatus != status){
+                        currentStatus = status;
+                        $(".r").empty();
+                        danger();
+                    }
                 }
                 else{
+                    status = 0;
+                    currentStatus = 0;
                     $(".r").empty();
                 }
             }
-    });
+        });
+    }, 1000);
 
 
 
