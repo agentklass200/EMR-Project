@@ -97,9 +97,9 @@ class Controller extends CI_Controller {
 		echo $this->model->get_meter($id);
 	}
 
-	public function get_latest_reading(){
+	public function get_latest_reading($limit = 1){
 		$id = $this->session->userdata["user_id"];
-		$data["readings"] = $this->model->get_latest_reading($id);
+		$data["readings"] = $this->model->get_latest_reading($id, $limit);
 		header('Content-Type: application/json');
 		echo json_encode($data);
 	}
