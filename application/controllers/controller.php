@@ -61,7 +61,9 @@ class Controller extends CI_Controller {
 	public function load_realtime($limit = 10) {
 		$this->check_logged_id();
 		$id = $this->session->userdata["user_id"];
+		$meter = $this->model->get_meter($id);
 		$data["readings"] = $this->model->get_latest_reading($id, $limit);
+		$data["current"] = $this->model->get_reading_days_today(date("d"), $meter);
 		$this->base_template('realtime', $data);
 	}
 

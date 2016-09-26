@@ -53,6 +53,11 @@ class Model extends CI_Model {
                  ->update("users", $data);
     }
 
+    public function get_kwh($id){
+
+    }
+
+
 //    APPLIANCES
 
     public function get_appliance_list(){
@@ -188,6 +193,17 @@ class Model extends CI_Model {
             ->from("readings")
             ->where('user_id', $id)
             ->where("DATEDIFF(NOW() - 1, date) BETWEEN " . " 1 AND " . $days)
+            ->group_by("user_id")
+            ->get();
+        return $query->result_array();
+    }
+
+    public function get_reading_days_today($days, $meter) {
+        $id = $this->get_user_id($meter);
+        $query = $this->db->select('DATE(date) as date, SUM(kwh) as kwh', false)
+            ->from("readings")
+            ->where('user_id', $id)
+            ->where('date BETWEEN DATE_SUB(NOW(), INTERVAL ' . $days . ' DAY) AND NOW()')
             ->group_by("user_id")
             ->get();
         return $query->result_array();
