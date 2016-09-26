@@ -5,30 +5,36 @@
         <div class="ct-chart ct-major-tenth">
                 
         </div>
-        <p class="realtime-text">Date: <strong>12/28/1995 12:30:32</strong> | Current KW: <strong>135</strong></p>
+        <p class="realtime-text">Date: <strong class="latest-date">12/28/1995 12:30:32</strong> | Current KW: <strong class="latest-kwh">135</strong></p>
     </div>
 </div>
 
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="<?php echo base_url() ?>chartist/chartist.min.js"></script>
 <script>
-        var data = {
-          labels: ['a', 'b', 'c', 'd'],
-          series: [
-            [1 , 2 , 3 , 1.5]
-          ]
-        }
+        $.ajax({
+            url : "get_latest_reading",
+            success: function(data){
+                var i;
+                var labels = [], series = [];
+                for(i = 0; i < data.readings.length; i++){
+                   labels.push(data.readings[i].date);
+                   series.push(parseInt(data.readings[i].kwh));
+                   if ( i ==  data.readings.length - 1){
+                      var latestDate = new S("latest-date", data.readings[i].date);
+                      var latestKwh = new S("latest-kwh", data.readings[i].kwh);
 
-        var chart = new Chartist.Line('.ct-chart', data);
-        var newLabels = ['e','f','g','h','i','j'];
-        var i = 0;
+                      // latestDate.write();
+                      // latestKwh.write();
+                   }
+                }
 
-        $(".ct-chart").click(function(){
-          timeout(function(){
-              data.labels.push(newLabels[i++]);
-              data.series[0].push( (Math.random()* 3) + 1);
-              chart.update();
-          }, 20) 
+                var graph = new Chartist.Line('.ct-chart', {
+                    labels: labels,
+                    series: [series]
+                });
+
+            }
         });
 
         function timeout(funct, x){

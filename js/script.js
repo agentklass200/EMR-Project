@@ -20,6 +20,9 @@ $(document).ready(function(){
             }
     });
 
+
+
+
 });
 
 function danger(){
@@ -61,4 +64,24 @@ function checkAlert(data){
            
         }
     });
+}
+
+function S(name,value){
+    this.name = name;
+    if(typeof value !== "undefined"){
+        this.value = value;
+    }
+
+    this.write = function(value){
+        $("."  + this.name).empty();
+        if(typeof value !== "undefined"){
+            this.value = value;
+        }
+        $("."  + this.name).append(this.value);
+    }
+
+    this.createDOM = function(element){
+        $(element).append("<span class='" + this.name + "'></span>");
+    }
+    
 }
