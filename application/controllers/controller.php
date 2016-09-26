@@ -102,6 +102,8 @@ class Controller extends CI_Controller {
 	public function get_latest_reading($limit = 1){
 		$id = $this->session->userdata["user_id"];
 		$data["readings"] = $this->model->get_latest_reading($id, $limit);
+		$meter = $this->model->get_meter($id);
+		$data["current"] = $this->model->get_reading_days_today(date("d"), $meter);
 		header('Content-Type: application/json');
 		echo json_encode($data);
 	}
